@@ -1,6 +1,6 @@
 <div align="center">
 
-# PocketDTA
+# PocketDTA: An advanced multimodal architecture for enhanced prediction of drug-target affinity from 3D structural data of target binding pockets
 
 [![python](https://img.shields.io/badge/-Python_3.7_%7C_3.8_%7C_3.9_%7C_3.10-blue?logo=python&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![pytorch](https://img.shields.io/badge/PyTorch_1.13+-ee4c2c?logo=pytorch&logoColor=white)](https://pytorch.org/get-started/locally/)
@@ -8,7 +8,7 @@
 
 </div>
 
-
+## 📌  Introduction 
 **Motivation:** Accurately predicting the drug-target binding affinity (DTA) is crucial to drug discovery and repurposing. Although deep learning has been widely used in this field, it still faces challenges with insufficient generalization performance, inadequate use of three-dimensional (3D) information and poor interpretability. 
 
 **Results:** To alleviate these problems, we developed the PocketDTA model. This model enhances the generalization performance by pre-trained models ESM-2 and GraphMVP. It ingeniously handles the first three (top-3) target binding pockets and drug 3D information through customized GVP-GNN Layers and GraphMVP-Decoder. Additionally, it employs a bilinear attention network to enhance interpretability. Comparative analysis with state-of-the-art (SOTA) methods on the optimized Davis and KIBA datasets reveals that the PocketDTA model exhibits significant performance advantages. Further, ablation studies confirm the effectiveness of the model components, whereas cold-start experiments illustrate its robust generalization capabilities. In particular, the PocketDTA model has shown significant advantages in identifying key drug functional groups and amino acid residues via molecular docking and literature valida-tion, highlighting its strong potential for interpretability. 
