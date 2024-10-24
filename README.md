@@ -4,8 +4,8 @@
 
 [![python](https://img.shields.io/badge/-Python_3.7_%7C_3.8_%7C_3.9_%7C_3.10-blue?logo=python&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![pytorch](https://img.shields.io/badge/PyTorch_1.13+-ee4c2c?logo=pytorch&logoColor=white)](https://pytorch.org/get-started/locally/)
-[![lightning](https://img.shields.io/badge/-rdkit_2023.3.2+-792ee5?logo=rdkit&logoColor=white)](https://pytorchlightning.ai/)
-
+[![rdkit](https://img.shields.io/badge/-rdkit_2023.3.2+-792ee5?logo=rdkit&logoColor=white)](https://anaconda.org/conda-forge/rdkit/)
+[![fair-esm](https://img.shields.io/badge/-fair-esm 2.0.0_+-792ee5?logo=fair-esm&logoColor=white)](https://anaconda.org/conda-forge/fair-esm/)
 </div>
 
 ## 📌  Introduction 
@@ -54,7 +54,7 @@ The two benchmark datasets Davis and KIBA have been placed in the dataset folder
 ## :gear: Pre-trained model
 Since the parameter files for the other pre-trained models are rather large, we will not give them here, you can download them according to the link below and save them to the appropriate location in the PocketDTA folder. [ESM-2](https://dl.fbaipublicfiles.com/fair-esm/models/esm2_t33_650M_UR50D.pt),[ProtBert](https://zenodo.org/records/4633691),[ProtT5](https://zenodo.org/records/4644188),[GraphMVP](https://github.com/chao1224/GraphMVP),[3Dinfomax](https://github.com/HannesStark/3DInfomax).
 
-## Training
+## :chart_with_upwards_trend: Training
 Once you have configured the base environment and dataset as well as some pre-trained models, you are ready to train the models.
 
 ```
@@ -65,7 +65,7 @@ In the meantime you can run the .sh file on a Linux system and train different s
 ```
 ./training.sh
 ```
-## Ablation study
+## :chart_with_downwards_trend: Ablation study
 **Representation ablation study**
 
 You can run the .sh file on a Linux system.
@@ -77,11 +77,11 @@ You can run the .sh file on a Linux system.
 ```
 ./Ablation_module.sh
 ```
-## Cold study
+## :bar_chart: Cold study
 ```
 ./Cold.sh
 ```
-## Interpretability analysis
+## :bar_chart: Interpretability analysis
 Firstly you need to change the data to the sample you want to test and then run the code below to get the drug weights atomic counterpart and amino acid residue counterpart weights.
 
 ```
