@@ -13,10 +13,10 @@
 
 **Results:** To alleviate these problems, we developed the PocketDTA model. This model enhances the generalization performance by pre-trained models ESM-2 and GraphMVP. It ingeniously handles the first three (top-3) target binding pockets and drug 3D information through customized GVP-GNN Layers and GraphMVP-Decoder. Additionally, it employs a bilinear attention network to enhance interpretability. Comparative analysis with state-of-the-art (SOTA) methods on the optimized Davis and KIBA datasets reveals that the PocketDTA model exhibits significant performance advantages. Further, ablation studies confirm the effectiveness of the model components, whereas cold-start experiments illustrate its robust generalization capabilities. In particular, the PocketDTA model has shown significant advantages in identifying key drug functional groups and amino acid residues via molecular docking and literature valida-tion, highlighting its strong potential for interpretability. 
 
-## Architecture
+## 🚀 Architecture
 ![PocketDTA](https://github.com/zhaolongNCU/PocketDTA/blob/main/PocketDTA.jpg)
 
-## Installation
+## :blue_heart: Installation
 First, you need to clone our code to your operating system.
 
 ```
@@ -86,4 +86,20 @@ Firstly you need to change the data to the sample you want to test and then run 
 
 ```
 python interaction_weight.py --task Davis --model DTAPredictor_test --r 2 --use-test True
+```
+
+## Citation
+If you found this work useful please consider citing the article.
+
+```bibtex
+@article{10.1093/bioinformatics/btae594,
+    author = {Zhao, Long and Wang, Hongmei and Shi, Shaoping},
+    title = "{PocketDTA: An advanced multimodal architecture for enhanced prediction of drug-target affinity from 3D structural data of target binding pockets}",
+    journal = {Bioinformatics},
+    pages = {btae594},
+    year = {2024},
+    month = {10},
+    doi = {10.1093/bioinformatics/btae594},
+    url = {https://doi.org/10.1093/bioinformatics/btae594},
+}
 ```
