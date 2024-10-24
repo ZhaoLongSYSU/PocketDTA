@@ -5,7 +5,7 @@
 [![python](https://img.shields.io/badge/-Python_3.7_%7C_3.8_%7C_3.9_%7C_3.10-blue?logo=python&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![pytorch](https://img.shields.io/badge/PyTorch_1.13+-ee4c2c?logo=pytorch&logoColor=white)](https://pytorch.org/get-started/locally/)
 [![rdkit](https://img.shields.io/badge/-rdkit_2023.3.2+-792ee5?logo=rdkit&logoColor=white)](https://anaconda.org/conda-forge/rdkit/)
-[![esm](https://img.shields.io/badge/-fair-esm 2.0.0_+-792ee5?logo=fair-esm&logoColor=white)](https://anaconda.org/conda-forge/fair-esm/)
+[![esm](https://img.shields.io/badge/fair-esm 2.0.0+-792ee5?logo=esm&logoColor=white)](https://anaconda.org/conda-forge/fair-esm/)
 
 </div>
 
