@@ -1,0 +1,86 @@
+MIT License
+
+Copyright (c) 2024 Long Zhao, Hongmei Wang, Shaoping Shi
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+ADDITIONAL NOTICES:
+
+This software uses the following third-party components with their respective licenses:
+
+1. AlphaFold Database Structures
+   - License: CC-BY 4.0
+   - Source: https://alphafold.ebi.ac.uk/
+   - The AlphaFold structures are provided under the Creative Commons Attribution 4.0 
+     International (CC BY 4.0) license. Users must give appropriate credit when using 
+     these structures.
+
+2. DoGSite3 Web Service
+   - License: Academic use only
+   - Source: https://proteins.plus/
+   - The DoGSite3 binding site prediction service is available for academic research 
+     purposes. Commercial use requires separate licensing.
+
+3. ESM-2 (Evolutionary Scale Modeling)
+   - License: MIT License
+   - Source: https://github.com/facebookresearch/esm
+   - Copyright (c) Meta Platforms, Inc. and affiliates.
+
+4. GraphMVP
+   - License: MIT License
+   - Source: https://github.com/chao1224/GraphMVP
+
+5. PyTorch and PyTorch Geometric
+   - License: BSD-3-Clause License
+   - Sources: https://pytorch.org/, https://pytorch-geometric.readthedocs.io/
+
+6. RDKit
+   - License: BSD-3-Clause License
+   - Source: https://www.rdkit.org/
+
+7. Davis Dataset
+   - Citation: Davis, M.I., et al. (2011). Comprehensive analysis of kinase inhibitor 
+     selectivity. Nature Biotechnology, 29(11), 1046-1051.
+   - Please cite the original paper when using this dataset.
+
+8. KIBA Dataset
+   - Citation: Tang, J., et al. (2014). Making sense of large-scale kinase inhibitor 
+     bioactivity data sets: a comparative and integrative analysis. 
+     Journal of Chemical Information and Modeling, 54(3), 735-743.
+   - Please cite the original paper when using this dataset.
+
+DISCLAIMER:
+
+This software is provided for research purposes only. The authors and contributors 
+make no warranties regarding the accuracy, completeness, or reliability of the 
+software or its results. Users are responsible for validating any predictions or 
+results obtained using this software.
+
+For drug discovery applications, experimental validation is required. This software 
+is not intended for clinical or diagnostic use.
+
+CITATION:
+
+If you use this software in your research, please cite:
+
+Zhao, L., Wang, H., & Shi, S. (2024). PocketDTA: An advanced multimodal architecture 
+for enhanced prediction of drug-target affinity from 3D structural data of target 
+binding pockets. Bioinformatics, btae594. https://doi.org/10.1093/bioinformatics/btae594
