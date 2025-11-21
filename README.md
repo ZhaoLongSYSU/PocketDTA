@@ -182,87 +182,44 @@ Results will be saved in the `result/` directory, including:
 
 ## 🔧 Data Preprocessing
 
-We provide complete data preprocessing pipelines for both **Davis** and **KIBA** datasets to help you prepare custom datasets or reproduce our results from scratch.
+We provide complete data preprocessing pipelines for preparing custom datasets or reproducing our results from scratch.
 
-### Overview
+### Pipeline Overview
 
-The `data_preprocess/` directory contains standalone preprocessing tools:
+The `data_preprocess/` directory contains standalone preprocessing tools for both Davis and KIBA datasets:
 
 ```
 data_preprocess/
-├── Davis/                    # Davis dataset preprocessing
-│   ├── README.md            # Detailed documentation
-│   ├── preprocess_alphafold_data.py
-│   ├── scrape_dogsite_pockets.py
-│   ├── extract_pocket_top1.py
-│   ├── extract_pocket_top2.py
-│   ├── extract_pocket_top3.py
-│   ├── coords_to_graph.py
-│   ├── run_pipeline.py      # Automated pipeline runner
-│   └── example_usage.py     # Usage examples
+├── Davis/              # Davis dataset preprocessing pipeline
+│   ├── README.md      # Complete documentation and usage guide
+│   └── ...            # Preprocessing scripts
 │
-├── KIBA/                    # KIBA dataset preprocessing
-│   └── (same structure as Davis/)
+├── KIBA/              # KIBA dataset preprocessing pipeline
+│   ├── README.md      # Complete documentation and usage guide
+│   └── ...            # Preprocessing scripts
 │
-└── requirements.txt         # Preprocessing dependencies
+└── requirements.txt   # Preprocessing dependencies
 ```
 
-### Preprocessing Pipeline
-
-The preprocessing workflow consists of four main steps:
-
-1. **Extract Protein Structures** (AlphaFold)
-   - Parse PDB files
-   - Extract 3D coordinates and sequences
-   - Output: `{Dataset}_Protein_Domain_Alphfold3d_dict.pickle`
-
-2. **Predict Binding Pockets** (DoGSite3)
-   - Web scraping from proteins.plus
-   - Download predicted pocket PDB files
-   - Manual extraction of ZIP archives required
-
-3. **Extract Pocket Residues**
-   - Parse top-1, top-2, top-3 pocket predictions
-   - Map residues to sequences
-   - Output: `{Dataset}_protein_domain_pocket_top{1,2,3}*.pickle`
-
-4. **Convert to Graph Representations**
-   - Build k-NN graphs from 3D coordinates
-   - Compute geometric features (RBF, dihedrals, orientations)
-   - Output: `{Dataset}_Domain_coord_graph_top{1,2,3}seqid_dict.pickle`
-
-### Quick Preprocessing
+### Quick Start
 
 ```bash
+# Navigate to dataset-specific directory
 cd data_preprocess/Davis  # or KIBA
 
-# Run complete pipeline
+# Run automated pipeline
 python run_pipeline.py --step all
-
-# Or run individual steps
-python run_pipeline.py --step preprocess
-python run_pipeline.py --step extract
-python run_pipeline.py --step graph
 ```
 
-### Custom Dataset Preprocessing
+### Workflow
 
-To process your own dataset:
+The pipeline processes: **AlphaFold PDB files** → **DoGSite3 pockets** → **Graph representations**
 
-1. Create a `process.csv` file with protein IDs:
-   ```csv
-   target_key
-   PROTEIN_ID_1
-   PROTEIN_ID_2
-   ```
+Final outputs: `{Dataset}_Domain_coord_graph_top{1,2,3}seqid_dict.pickle`
 
-2. Download PDB files to `prot_3d_for_{Dataset}/`
-
-3. Run the preprocessing pipeline
-
-4. Copy generated `.pickle` files to `dataset/{Dataset}/`
-
-For detailed instructions, see `data_preprocess/Davis/README.md` or `data_preprocess/KIBA/README.md`.
+📖 **For detailed instructions, custom dataset processing, and troubleshooting, see:**
+- [`data_preprocess/Davis/README.md`](data_preprocess/Davis/README.md)
+- [`data_preprocess/KIBA/README.md`](data_preprocess/KIBA/README.md)
 
 ---
 
