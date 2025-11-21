@@ -67,7 +67,6 @@ To address these challenges, we developed **PocketDTA**, an advanced multimodal 
 - **🧠 GVP-GNN Architecture**: Custom Geometric Vector Perceptron Graph Neural Networks for 3D geometry
 - **🎨 Bilinear Attention**: Captures cross-modal interactions between proteins and molecules
 - **📊 High Interpretability**: Provides attention weights for understanding binding mechanisms
-- **🔄 Transfer Learning Ready**: Pre-trained components for various DTA prediction tasks
 
 ---
 
@@ -471,47 +470,6 @@ If you use this code in your research, please cite our paper:
 }
 ```
 
----
-
-## ❓ FAQ
-
-### Installation Issues
-
-**Q: PyTorch Geometric installation fails**  
-A: Install torch-geometric dependencies manually:
-```bash
-pip install torch-scatter torch-sparse torch-cluster -f https://data.pyg.org/whl/torch-1.13.0+cu117.html
-```
-
-**Q: CUDA out of memory error**  
-A: Reduce batch size or use CPU mode by setting `--device cpu`
-
-### Data Issues
-
-**Q: Where to download PDB files?**  
-A: Download from [Google Cloud Drive](https://drive.google.com/drive/folders/1qJXsxkTSgwPSTpu-XmIUh2rD2jJ1KuGQ) or generate them using `data_preprocess/` scripts
-
-**Q: Can I use my own dataset?**  
-A: Yes! Follow the preprocessing pipeline in `data_preprocess/` to prepare your data
-
-### Training Issues
-
-**Q: Training is very slow**  
-A: Ensure you're using GPU (`--device cuda:0`) and consider reducing dataset size for testing
-
-**Q: How long does training take?**  
-A: ~2-4 hours on Davis, ~6-12 hours on KIBA (with single GPU)
-
-### Model Issues
-
-**Q: Where to place ESM-2 model file?**  
-A: Check `configs/` for the expected path, typically in a `pretrained/` directory
-
-**Q: Can I use other protein encoders?**  
-A: Yes, see ablation studies for ProtBert and ProtT5 examples
-
----
-
 ## 📄 License
 
 This project is released under the MIT License. See [LICENSE](LICENSE) file for details.
@@ -520,24 +478,6 @@ Please also check licenses for:
 - **AlphaFold structures**: CC-BY 4.0
 - **DoGSite3**: Academic use only
 - **Pre-trained models**: Check individual model licenses
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to:
-- Report bugs or issues
-- Suggest new features
-- Submit pull requests
-- Improve documentation
-
----
-
-## 📬 Contact
-
-For questions or collaboration:
-- **Issues**: Open an issue on [GitHub](https://github.com/zhaolongNCU/PocketDTA/issues)
-- **Email**: Contact the authors (see paper for details)
 
 ---
 
@@ -555,7 +495,6 @@ For questions or collaboration:
 
 <div align="center">
 
-**Made with ❤️ for the drug discovery community**
 
 ⭐ If you find this project helpful, please consider giving it a star!
 
