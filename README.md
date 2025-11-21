@@ -28,7 +28,6 @@
 - [Interpretability Analysis](#-interpretability-analysis)
 - [Project Structure](#-project-structure)
 - [Citation](#-citation)
-- [FAQ](#-faq)
 - [License](#-license)
 
 ---
